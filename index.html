@@ -53,31 +53,27 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/mmenu.js"></script>
       <script>
-		document.addEventListener(
-			"DOMContentLoaded", () => {
-				new Mmenu("#menu", {
-					"theme": "dark",
-					"navbar": {
-						"add": true
-					},
-					"offCanvas": {
-						"position": "left"
-					}
-				}, {
-					// configuration
-					offCanvas: {
-						clone: true
-					}
-				});
-				document.querySelector('#mm-clone-menu').classList.remove('collapse', 'navbar-collapse');
-				[].forEach.call(document.querySelectorAll('#mm-clone-menu .dropdown-menu'), function(el) {
-					el.classList.remove('dropdown-menu');
-				});
-				[].forEach.call(document.querySelectorAll('#mm-clone-menu .dropdown-toggle'), function(el) {
-					el.classList.remove('dropdown-toggle');
-				});
-			}
-		);
+	document.addEventListener(
+		"DOMContentLoaded", () => {
+			new Mmenu("#menu", {
+				"theme": "light",
+				"offCanvas": {
+					"position": "left"
+				}
+			}, {
+				offCanvas: {
+					clone: true
+				}
+			});
+			document.querySelector('#mm-clone-menu').classList.remove('collapse', 'navbar-collapse');
+			[].forEach.call(document.querySelectorAll('#mm-clone-menu .dropdown-menu'), function(el) {
+				el.classList.remove('dropdown-menu');
+			});
+			[].forEach.call(document.querySelectorAll('#mm-clone-menu .dropdown-toggle'), function(el) {
+				el.classList.remove('dropdown-toggle');
+			});
+		}
+	);
       </script>
    </body>
 </html>
